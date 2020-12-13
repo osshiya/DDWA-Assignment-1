@@ -1,39 +1,51 @@
-# Your Project's Name
+# DDWA Assignment 1 - CMS for IMGD Resource Library
 
-One or two paragraphs providing an overview of your project. Tell us about your project.
+A PHP-based Content Management System for IMGD Resource Library accessible by Staffs, Lecturers and Students. The IRL is responsible for the purchasing, installation and maintenance of all softwares for the IMGD students. The IRL also purchases new software titles, upgrades the existing softwares and remove unused softwares based on the requirements specified by the Course Management. The IRL holds on to Lists of Softwares, Consultancy Projects, Students and Lecturers related to the IMGD course. 
 
-Essentially, this part is your sales pitch.
- 
+- [GitHub](https://github.com/osshiya/DME-Assignment-1.git)
+- [GitHub Pages](https://osshiya.github.io/DDWA-Assignment-1/)
+
 ## Design Process
- 
-Provide us insights about your design process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+The website is for three different groups of users; Adminstrator, Staff and Students from IMGD. The website is mainly used for IMGD course-relaated information regarding the softwares and projects involved with Students and Lecturers. To achieve the target and for it to be the most ideal way for different users to make use of these system. Different users will have different extent of abilities and permission to view information that will be useful for them in regards to the roles they are assigned to.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+ As a Adminstrator, I will want to have full access to all the information of the staffs and students as will as the ability to modify and change information.
+ As a Staff, I will want to have access to all the information of students and information for the staffs.
+ As a Student, I will want to have access to information for students only.
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
-These files should themselves either be included as a pdf file in the project itself (in an separate directory)
-Include the Adobe XD wireframe as a folder. You can include the XD share url. 
+Adminstrators: Can view all the pages and equipped with permission to modify details.
+Staff: View all the informative pages but have no permission to modify information.
+Students: View pages with information of students only.
+
+        This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
+        These files should themselves either be included as a pdf file in the project itself (in an separate directory)
+        Include the Adobe XD wireframe as a folder. You can include the XD share url. 
 
 ## Features
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+Adminstrator Page: Page with modifiable details.
+Student List: list of students.
+Staff List: list of staffs.
+Notebook Specifications: list of specification for notebooks.
+Software List: list of requried software.
+Project List: Project involved in and informations.
  
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+        ### Existing Features
+        - Feature 1 - allows users X to achieve Y, by having them fill out Z
+        - ...
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+        In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
 - Another feature idea
 
 ## Technologies Used
-
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
+- [HTML]
+    - The project uses **HTML** to create formatting.
+- [Javascript]
+    - The project uses **Javascript** to create features.
+- [CSS]
+    - The project uses **CSS** to modify the components' style.
 
 
 ## Testing
@@ -61,5 +73,4 @@ If this section grows too long, you may want to split it off into a separate fil
 - The photos used in this site were obtained from ...
 
 ### Acknowledgements
-
-- I received inspiration for this project from X
+- I received inspiration for this project from DDWA Assignment01 Brief.pdf
