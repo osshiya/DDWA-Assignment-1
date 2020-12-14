@@ -1,20 +1,21 @@
 # DDWA Assignment 1 - CMS for IMGD Resource Library
 
-A PHP-based Content Management System for IMGD Resource Library accessible by Staffs, Lecturers and Students. The IRL is responsible for the purchasing, installation and maintenance of all softwares for the IMGD students. The IRL also purchases new software titles, upgrades the existing softwares and remove unused softwares based on the requirements specified by the Course Management. The IRL holds on to Lists of Softwares, Consultancy Projects, Students and Lecturers related to the IMGD course. 
+A PHP-based Content Management System for IMGD Resource Library accessible by Staffs, Lecturers and Students. The IRL is responsible for the purchasing, installation, and maintenance of all software for the IMGD students. The IRL also purchases new software titles, upgrades the existing software, and remove unused software based on the requirements specified by the Course Management. The IRL holds on to Lists of Software, Consultancy Projects, Students and Lecturers related to the IMGD course.
 
 - [GitHub](https://github.com/osshiya/DME-Assignment-1.git)
 - [GitHub Pages](https://osshiya.github.io/DDWA-Assignment-1/)
 - [Amphibistudio](https://student.amphibistudio.sg/10187403A/DDWA/DDWA-Assg01-S10187403A-OngShiYa/)
 
 ## Design Process
-The website is for three different groups of users; Adminstrator, Staff and Students from IMGD. The website is mainly used for IMGD course-relaated information regarding the softwares and projects involved with Students and Lecturers. To achieve the target and for it to be the most ideal way for different users to make use of these system. Different users will have different extent of abilities and permission to view information that will be useful for them in regards to the roles they are assigned to.
+The website is for three different groups of users: Administrator, Staff and Students from IMGD. The website is mainly used for IMGD course-related information regarding the software and projects involved with Students and Lecturers. To achieve the target and for it to be the most ideal way for different users to make use of these system. Different users will have different extent of abilities and permission to view information that will be useful for them regarding the roles they are assigned to.
 
-As a Adminstrator, I will want to have full access to all the information of the staffs and students as will as the ability to modify and change information.
-As a Staff, I will want to have access to all the information of students and information for the staffs.
+As an Administrator, I will want to have full access to all the information of the staffs and students as well as the ability to modify and change information. 
+As a Staff, I will want to have access to all the information of students and information for the staffs. 
 As a Student, I will want to have access to information for students only.
 
-Adminstrators: Can view all the pages and equipped with permission to modify details.
-Staff: View all the informative pages but have no permission to modify information.
+
+Administrators: Can view all the pages and equipped with permission to modify details. 
+Staff: View all the informative pages but have no permission to modify information. 
 Students: View pages with information of students only.
 
 - Administrator
@@ -56,7 +57,7 @@ Students: View pages with information of students only.
 ## Testing
 1. Login
     1. Try to log in from "index" page with wrong details, nothing happened, site refreshed.
-    2. Try again with correct details. Log in to one of the three site depending on the role of the user.
+    2. Try again with correct details. Log in to one of the three sites depending on the role of the user.
 
 2. Access tables
     1. Tap on any of the buttons after entering one of the three roles' sites, grayed out buttons are not avaliable to some users depending on their roles.
