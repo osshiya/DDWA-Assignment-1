@@ -9,9 +9,9 @@ A PHP-based Content Management System for IMGD Resource Library accessible by St
 ## Design Process
 The website is for three different groups of users; Adminstrator, Staff and Students from IMGD. The website is mainly used for IMGD course-relaated information regarding the softwares and projects involved with Students and Lecturers. To achieve the target and for it to be the most ideal way for different users to make use of these system. Different users will have different extent of abilities and permission to view information that will be useful for them in regards to the roles they are assigned to.
 
- As a Adminstrator, I will want to have full access to all the information of the staffs and students as will as the ability to modify and change information.
- As a Staff, I will want to have access to all the information of students and information for the staffs.
- As a Student, I will want to have access to information for students only.
+As a Adminstrator, I will want to have full access to all the information of the staffs and students as will as the ability to modify and change information.
+As a Staff, I will want to have access to all the information of students and information for the staffs.
+As a Student, I will want to have access to information for students only.
 
 Adminstrators: Can view all the pages and equipped with permission to modify details.
 Staff: View all the informative pages but have no permission to modify information.
@@ -45,8 +45,10 @@ Students: View pages with information of students only.
     - The project uses **JQuery** to simplify DOM manipulation.
 - [HTML]
     - The project uses **HTML** to create formatting.
-- [Javascript]
-    - The project uses **Javascript** to create features.
+- [PHP](https://www.php.net/)
+    - The project uses **PHP** to display data from SQL.
+- [SQL](https://www.mysql.com/)
+   - The project uses **SQL** to store and retrieve data.
 - [CSS]
     - The project uses **CSS** to modify the components' style.
 
