@@ -2,7 +2,7 @@
 
 A PHP-based Content Management System for IMGD Resource Library accessible by Staffs, Lecturers and Students. The IRL is responsible for the purchasing, installation, and maintenance of all software for the IMGD students. The IRL also purchases new software titles, upgrades the existing software, and remove unused software based on the requirements specified by the Course Management. The IRL holds on to Lists of Software, Consultancy Projects, Students and Lecturers related to the IMGD course.
 
-- [GitHub](https://github.com/osshiya/DME-Assignment-1.git)
+- [GitHub](https://github.com/osshiya/DDWA-Assignment-1.git)
 - [GitHub Pages](https://osshiya.github.io/DDWA-Assignment-1/)
 - [Amphibistudio](https://student.amphibistudio.sg/10187403A/DDWA/DDWA-Assg01-S10187403A-OngShiYa/)
 
