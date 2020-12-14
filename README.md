@@ -4,7 +4,7 @@ A PHP-based Content Management System for IMGD Resource Library accessible by St
 
 - [GitHub](https://github.com/osshiya/DME-Assignment-1.git)
 - [GitHub Pages](https://osshiya.github.io/DDWA-Assignment-1/)
-- [Amphibistudio]()
+- [Amphibistudio](https://student.amphibistudio.sg/10187403A/DDWA/DDWA-Assg01-S10187403A-OngShiYa/)
 
 ## Design Process
 The website is for three different groups of users; Adminstrator, Staff and Students from IMGD. The website is mainly used for IMGD course-relaated information regarding the softwares and projects involved with Students and Lecturers. To achieve the target and for it to be the most ideal way for different users to make use of these system. Different users will have different extent of abilities and permission to view information that will be useful for them in regards to the roles they are assigned to.
