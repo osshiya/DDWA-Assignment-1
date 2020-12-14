@@ -17,6 +17,16 @@ Adminstrators: Can view all the pages and equipped with permission to modify det
 Staff: View all the informative pages but have no permission to modify information.
 Students: View pages with information of students only.
 
+- Administrator
+    - name: admin
+    - password: adminpwd
+- Staff
+    - name: staff
+    - password: staffpwd
+-  Student
+    - name: student
+    - password: studentpwd
+
 ## Features
 - Access to respective pages after keying username and password stored from the database.
 - Adminstrator Page: Page with modifiable details.
