@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 13, 2020 at 02:49 PM
+-- Generation Time: Dec 14, 2020 at 12:01 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.19
 
@@ -29,17 +29,17 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `adminlist` (
-  `Type` varchar(30) NOT NULL,
-  `Name` varchar(30) NOT NULL,
-  `ID` varchar(30) NOT NULL,
-  `PWD` varchar(30) NOT NULL
+  `type` varchar(30) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `id` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16;
 
 --
 -- Dumping data for table `adminlist`
 --
 
-INSERT INTO `adminlist` (`Type`, `Name`, `ID`, `PWD`) VALUES
+INSERT INTO `adminlist` (`type`, `name`, `id`, `password`) VALUES
 ('administrator', 'admin', 'admin', 'adminpwd');
 
 -- --------------------------------------------------------
@@ -49,21 +49,21 @@ INSERT INTO `adminlist` (`Type`, `Name`, `ID`, `PWD`) VALUES
 --
 
 CREATE TABLE `fulllist` (
-  `Type` varchar(30) NOT NULL,
-  `Name` varchar(30) NOT NULL,
-  `ID` varchar(30) NOT NULL,
-  `PWD` varchar(30) NOT NULL
+  `type` varchar(30) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `id` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16;
 
 --
 -- Dumping data for table `fulllist`
 --
 
-INSERT INTO `fulllist` (`Type`, `Name`, `ID`, `PWD`) VALUES
+INSERT INTO `fulllist` (`type`, `name`, `id`, `password`) VALUES
 ('administrator', 'Admin', 'admin', 'adminpwd'),
 ('staff', 'Elvis Millar', 'elvis', 'elvispwd'),
 ('student', 'Marlie Dale', 'marlie', 'marliepwd'),
-('staff', 'Staff', 'staff', 'staff'),
+('staff', 'Staff', 'staff', 'staffpwd'),
 ('student', 'Student', 'student', 'studentpwd'),
 ('staff', 'Uwais Moody', 'uwais', 'uwaispwd');
 
@@ -74,19 +74,19 @@ INSERT INTO `fulllist` (`Type`, `Name`, `ID`, `PWD`) VALUES
 --
 
 CREATE TABLE `notebookreq` (
-  `Make` varchar(30) NOT NULL,
-  `Model` varchar(30) NOT NULL,
-  `Processor` varchar(30) NOT NULL,
-  `HardDiskCap` int(11) NOT NULL,
-  `AmtOfRAM` int(11) NOT NULL,
-  `OS` varchar(30) NOT NULL
+  `make` varchar(30) NOT NULL,
+  `model` varchar(30) NOT NULL,
+  `processor` varchar(30) NOT NULL,
+  `cap` int(11) NOT NULL,
+  `ram` int(11) NOT NULL,
+  `os` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16;
 
 --
 -- Dumping data for table `notebookreq`
 --
 
-INSERT INTO `notebookreq` (`Make`, `Model`, `Processor`, `HardDiskCap`, `AmtOfRAM`, `OS`) VALUES
+INSERT INTO `notebookreq` (`make`, `model`, `processor`, `cap`, `ram`, `os`) VALUES
 ('Lenovo', 'ThinkPad L13', 'Intel Core i5-10210U', 512, 8, 'Windows 10 Pro 64'),
 ('Microsoft', 'Surface Laptop 3', 'Intel Core i5-1035G7', 256, 8, 'Windows 10 Home 64');
 
@@ -97,14 +97,21 @@ INSERT INTO `notebookreq` (`Make`, `Model`, `Processor`, `HardDiskCap`, `AmtOfRA
 --
 
 CREATE TABLE `projectlist` (
-  `ProjectNo` varchar(10) NOT NULL,
-  `Title` varchar(30) NOT NULL,
-  `ShortDesc` varchar(30) NOT NULL,
-  `StartDate` date NOT NULL,
-  `CompletionDate` date NOT NULL,
-  `BudgetAllocated` int(11) NOT NULL,
-  `CompanyName` varchar(30) NOT NULL
+  `projectno` varchar(10) NOT NULL,
+  `projecttitle` varchar(30) NOT NULL,
+  `shortdesc` varchar(50) NOT NULL,
+  `startdate` date NOT NULL,
+  `completiondate` date NOT NULL,
+  `budgetallocated` int(11) NOT NULL,
+  `companyname` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16;
+
+--
+-- Dumping data for table `projectlist`
+--
+
+INSERT INTO `projectlist` (`projectno`, `projecttitle`, `shortdesc`, `startdate`, `completiondate`, `budgetallocated`, `companyname`) VALUES
+('76799943', 'Go Green', 'Go Green today by 3R', '2016-07-09', '2018-02-04', 1000, 'EconoBug');
 
 -- --------------------------------------------------------
 
@@ -113,20 +120,20 @@ CREATE TABLE `projectlist` (
 --
 
 CREATE TABLE `softwarelist` (
-  `SerialNo` varchar(10) NOT NULL,
-  `Title` varchar(30) NOT NULL,
-  `NoOfLicenseCopies` int(11) NOT NULL,
-  `DatePurchased` date NOT NULL,
-  `PricePerLicenseCopy` int(11) NOT NULL,
-  `Publisher` varchar(30) NOT NULL
+  `serialno` varchar(10) NOT NULL,
+  `softwaretitle` varchar(30) NOT NULL,
+  `publisher` varchar(30) NOT NULL,
+  `copiesno` int(11) NOT NULL,
+  `copiesprice` int(11) NOT NULL,
+  `datepurchased` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16;
 
 --
 -- Dumping data for table `softwarelist`
 --
 
-INSERT INTO `softwarelist` (`SerialNo`, `Title`, `NoOfLicenseCopies`, `DatePurchased`, `PricePerLicenseCopy`, `Publisher`) VALUES
-('p6LFpAFX', 'Adobe Photoshop', 8, '2020-03-11', 55, 'Adobe');
+INSERT INTO `softwarelist` (`serialno`, `softwaretitle`, `publisher`, `copiesno`, `copiesprice`, `datepurchased`) VALUES
+('p6LFpAFX', 'Adobe Photoshop', 'Adobe', 8, 55, '2020-03-11');
 
 -- --------------------------------------------------------
 
@@ -135,22 +142,23 @@ INSERT INTO `softwarelist` (`SerialNo`, `Title`, `NoOfLicenseCopies`, `DatePurch
 --
 
 CREATE TABLE `stafflist` (
-  `Type` varchar(30) NOT NULL,
-  `Name` varchar(30) NOT NULL,
-  `ID` varchar(30) NOT NULL,
-  `PWD` varchar(30) NOT NULL,
-  `DateJoined` date DEFAULT NULL,
-  `OfficeLocation` varchar(30) NOT NULL,
-  `ContactNo` int(8) NOT NULL
+  `type` varchar(30) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `id` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `datejoined` date DEFAULT NULL,
+  `contactno` int(8) NOT NULL,
+  `officelocation` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16;
 
 --
 -- Dumping data for table `stafflist`
 --
 
-INSERT INTO `stafflist` (`Type`, `Name`, `ID`, `PWD`, `DateJoined`, `OfficeLocation`, `ContactNo`) VALUES
-('staff', 'Elvis Millar', 'elvis', 'elvispwd', '2020-12-01', 'East', 94455234),
-('staff', 'Uwais Moody', 'uwais', 'uwaispwd', '2019-08-05', 'West', 97324588);
+INSERT INTO `stafflist` (`type`, `name`, `id`, `password`, `datejoined`, `contactno`, `officelocation`) VALUES
+('staff', 'Elvis Millar', 'elvis', 'elvispwd', '2020-12-01', 94455234, 'East'),
+('staff', 'Staff', 'staff', 'staffpwd', '2000-01-01', 99645775, 'Central'),
+('staff', 'Uwais Moody', 'uwais', 'uwaispwd', '2019-08-05', 97324588, 'West');
 
 -- --------------------------------------------------------
 
@@ -163,8 +171,8 @@ CREATE TABLE `studentlist` (
   `name` varchar(30) NOT NULL,
   `id` varchar(30) NOT NULL,
   `password` varchar(30) NOT NULL,
-  `YearEnrolled` year(4) NOT NULL,
-  `ContactNo` int(8) NOT NULL,
+  `yearenrolled` year(4) NOT NULL,
+  `contactno` int(8) NOT NULL,
   `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf16;
 
@@ -172,7 +180,7 @@ CREATE TABLE `studentlist` (
 -- Dumping data for table `studentlist`
 --
 
-INSERT INTO `studentlist` (`type`, `name`, `id`, `password`, `YearEnrolled`, `ContactNo`, `status`) VALUES
+INSERT INTO `studentlist` (`type`, `name`, `id`, `password`, `yearenrolled`, `contactno`, `status`) VALUES
 ('student', 'Marlie Dale', 'marlie', 'marliepwd', 2018, 88453774, 'active'),
 ('student', 'Student', 'student', 'studentpwd', 2021, 94542255, 'active');
 
@@ -184,37 +192,37 @@ INSERT INTO `studentlist` (`type`, `name`, `id`, `password`, `YearEnrolled`, `Co
 -- Indexes for table `adminlist`
 --
 ALTER TABLE `adminlist`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `fulllist`
 --
 ALTER TABLE `fulllist`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `notebookreq`
 --
 ALTER TABLE `notebookreq`
-  ADD PRIMARY KEY (`Make`,`Model`,`Processor`,`HardDiskCap`,`AmtOfRAM`,`OS`);
+  ADD PRIMARY KEY (`make`,`model`,`processor`,`cap`,`ram`,`os`);
 
 --
 -- Indexes for table `projectlist`
 --
 ALTER TABLE `projectlist`
-  ADD PRIMARY KEY (`ProjectNo`);
+  ADD PRIMARY KEY (`projectno`);
 
 --
 -- Indexes for table `softwarelist`
 --
 ALTER TABLE `softwarelist`
-  ADD PRIMARY KEY (`SerialNo`);
+  ADD PRIMARY KEY (`serialno`);
 
 --
 -- Indexes for table `stafflist`
 --
 ALTER TABLE `stafflist`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `studentlist`
